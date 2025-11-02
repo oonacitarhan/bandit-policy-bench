@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bandit-policy-bench"
+version = "0.2.0"
+description = "Compare epsilon-greedy, UCB1 and Thompson sampling with repeated seeded trials and uncertainty summaries."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["banditbench*"]
