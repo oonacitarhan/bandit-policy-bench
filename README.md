@@ -21,7 +21,7 @@ python3 -m banditbench examples/bernoulli.json --trials 20 --steps 2000
 - `banditbench/cli.py` — argument parsing and JSON output.
 - `examples/` — small reproducible inputs.
 - `tests/` — API, numerical, and CLI checks.
-- `benchmarks/run.py` — timed representative workload.
+- `benchmarks/run.py` — timed representative workload; machine-dependent measurements.
 
 ## How it works
 
@@ -33,7 +33,7 @@ Policy randomness and reward randomness use separate seeded generators. Thompson
 sh scripts/check.sh
 ```
 
-Seven test groups plus the original reference Python checks exercise reference cases, invalid inputs, and relevant invariants.
+Eight Python test groups exercise reference cases, invalid inputs, and relevant invariants.
 The complete local run is in [docs/verification.txt](docs/verification.txt).
 The [checks workflow](.github/workflows/check.yml) executes the same source checks.
 
